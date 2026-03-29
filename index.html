@@ -4,269 +4,149 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Iron Pulse Gym</title>
-  <meta
-    name="description"
-    content="Iron Pulse Gym is a modern black-themed fitness website focused on strength, discipline, and transformation."
-  >
+  <meta name="description" content="Simple black themed gym website using all provided images.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header" id="top">
-    <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="Iron Pulse Gym home">
-        <span class="brand-mark">IP</span>
-        <span class="brand-text">
+  <header>
+    <div class="wrap bar">
+      <a href="#home" class="logo">
+        <span class="box">IP</span>
+        <span class="name">
           <strong>Iron Pulse</strong>
           <small>Strength Studio</small>
         </span>
       </a>
 
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <button id="menuBtn" class="menu-btn" type="button">Menu</button>
 
-      <nav class="site-nav">
+      <nav id="menu">
         <a href="#about">About</a>
-        <a href="#programs">Programs</a>
+        <a href="#training">Training</a>
         <a href="#gallery">Gallery</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact" class="nav-cta">Join Now</a>
+        <a href="#plans">Plans</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-media">
-        <img src="assets/image1.webp" alt="Premium gym interior with strength machines">
+  <section class="hero" id="home">
+    <img src="assets/image1.webp" alt="Gym interior with machines">
+    <div class="overlay"></div>
+    <div class="wrap hero-text">
+      <p class="tag">Built for focus. Powered by discipline.</p>
+      <h1>Train In A Dark Space Built For Real Results.</h1>
+      <p class="info">
+        Strong atmosphere, serious equipment, and a black theme that matches the energy of your gym images from the
+        first look itself.
+      </p>
+      <div class="buttons">
+        <a href="#plans" class="btn gold">Join Now</a>
+        <a href="#gallery" class="btn line">See Gallery</a>
       </div>
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <p class="eyebrow">Built for focus. Powered by discipline.</p>
-        <h1>Train hard in a space that feels as strong as your goals.</h1>
-        <p class="hero-copy">
-          Iron Pulse is a high-energy training studio for strength, conditioning, and total body transformation.
-          Minimal distractions, serious equipment, and a community that keeps you moving.
-        </p>
-        <div class="hero-actions">
-          <a href="#pricing" class="btn btn-primary">Explore Plans</a>
-          <a href="#gallery" class="btn btn-secondary">See The Space</a>
-        </div>
+    </div>
+  </section>
 
-        <div class="hero-stats">
-          <article>
-            <strong class="stat-number" data-target="1200">0</strong>
-            <span>Members trained</span>
-          </article>
-          <article>
-            <strong class="stat-number" data-target="18">0</strong>
-            <span>Elite trainers</span>
-          </article>
-          <article>
-            <strong class="stat-number" data-target="24">0</strong>
-            <span>Hours open</span>
-          </article>
-        </div>
+  <section class="wrap about" id="about">
+    <div class="text">
+      <p class="tag">About</p>
+      <h2>A simple gym website with a strong black look.</h2>
+      <p>
+        Iron Pulse is for people who want serious training, clean equipment, and a focused environment. This design
+        keeps things simple while still showing all your gym photos clearly.
+      </p>
+    </div>
+    <div class="photo">
+      <img src="assets/image5.jpg" alt="Dark gym room with weights">
+    </div>
+  </section>
+
+  <section class="wrap training" id="training">
+    <p class="tag">Training</p>
+    <h2>Programs That Match Your Grind</h2>
+
+    <div class="cards">
+      <div class="card">
+        <img src="assets/image4.jpeg" alt="Man training with dumbbell">
+        <h3>Strength</h3>
+        <p>Lift heavier, build power, and train with routines focused on muscle growth.</p>
       </div>
-    </section>
 
-    <section class="about section" id="about">
-      <div class="container split-grid">
-        <div class="section-copy">
-          <p class="eyebrow">Why train here</p>
-          <h2>Dark, focused, and designed for real progress.</h2>
-          <p>
-            Every corner of Iron Pulse is built to support consistency. From free weights and machines to personal
-            coaching and recovery guidance, the environment is structured to keep you locked in.
-          </p>
-          <div class="feature-list">
-            <article>
-              <h3>Strength-first setup</h3>
-              <p>Top-tier machines, loaded racks, and clean training zones for efficient workouts.</p>
-            </article>
-            <article>
-              <h3>Coaching that adapts</h3>
-              <p>Beginner-friendly guidance with serious progression paths for advanced lifters too.</p>
-            </article>
-            <article>
-              <h3>Atmosphere that pushes you</h3>
-              <p>Low-light interiors, bold design, and high-intensity energy from warm-up to last rep.</p>
-            </article>
-          </div>
-        </div>
-
-        <div class="about-card">
-          <img src="assets/image5.jpg" alt="Dark gym area with dumbbells and training equipment">
-          <div class="about-card-panel">
-            <span>Open every day</span>
-            <strong>Personal training, group sessions, cardio, strength, mobility</strong>
-          </div>
-        </div>
+      <div class="card">
+        <img src="assets/image3.jpeg" alt="Leg workout image">
+        <h3>Transformation</h3>
+        <p>Simple plans that help with fat loss, shape improvement, and body changes.</p>
       </div>
-    </section>
 
-    <section class="programs section" id="programs">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Programs</p>
-            <h2>Choose the style that matches your grind.</h2>
-          </div>
-          <p>
-            Whether you want to bulk, cut, move better, or simply stay consistent, these core tracks cover the
-            essentials.
-          </p>
-        </div>
-
-        <div class="program-grid">
-          <article class="program-card">
-            <img src="assets/image4.jpeg" alt="Athlete doing a dumbbell exercise in the gym">
-            <div class="program-card-copy">
-              <h3>Strength Building</h3>
-              <p>Progressive overload plans, compound lifts, and focused support for muscle and power.</p>
-            </div>
-          </article>
-          <article class="program-card">
-            <img src="assets/image3.jpeg" alt="Athlete performing seated leg training exercise">
-            <div class="program-card-copy">
-              <h3>Body Recomposition</h3>
-              <p>Burn fat while building lean muscle through intelligent routines and coaching.</p>
-            </div>
-          </article>
-          <article class="program-card">
-            <img src="assets/image2.jpeg" alt="Gym dumbbells lined up in a modern training floor">
-            <div class="program-card-copy">
-              <h3>Functional Conditioning</h3>
-              <p>Cardio, movement drills, and endurance work for everyday performance and stamina.</p>
-            </div>
-          </article>
-        </div>
+      <div class="card">
+        <img src="assets/image2.jpeg" alt="Dumbbells in gym">
+        <h3>Conditioning</h3>
+        <p>Improve stamina, movement, and consistency with regular full-body sessions.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="gallery section" id="gallery">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Gallery</p>
-            <h2>The space behind the sessions.</h2>
-          </div>
-          <p>All the visuals here are pulled directly from your asset set and arranged into a bold black layout.</p>
-        </div>
+  <section class="wrap gallery" id="gallery">
+    <p class="tag">Gallery</p>
+    <h2>Inside The Gym</h2>
 
-        <div class="gallery-grid">
-          <figure class="gallery-item large">
-            <img src="assets/image1.webp" alt="Wide view of the gym interior and machines">
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/image2.jpeg" alt="Row of dumbbells inside the gym">
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/image3.jpeg" alt="Athlete seated on a machine during workout">
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/image4.jpeg" alt="Athlete training with a dumbbell in the gym">
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/image5.jpg" alt="Moody gym rack and weights in dark lighting">
-          </figure>
-        </div>
+    <div class="pics">
+      <img src="assets/image1.webp" alt="Main gym image">
+      <img src="assets/image2.jpeg" alt="Dumbbells">
+      <img src="assets/image3.jpeg" alt="Workout machine image">
+      <img src="assets/image4.jpeg" alt="Athlete with dumbbell">
+      <img src="assets/image5.jpg" alt="Dark training room">
+    </div>
+  </section>
+
+  <section class="wrap plans" id="plans">
+    <p class="tag">Plans</p>
+    <h2>Simple Membership Plans</h2>
+
+    <div class="prices">
+      <div class="plan">
+        <h3>Basic</h3>
+        <p class="cost">Rs 1499</p>
+        <p>Gym access and open floor training.</p>
       </div>
-    </section>
 
-    <section class="pricing section" id="pricing">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Membership</p>
-            <h2>Simple plans. No confusion.</h2>
-          </div>
-          <p>Start with the pace that fits you now and upgrade when you want more coaching or access.</p>
-        </div>
-
-        <div class="pricing-grid">
-          <article class="price-card">
-            <span class="plan-tag">Starter</span>
-            <h3>Basic Access</h3>
-            <p class="price">Rs 1,499<span>/month</span></p>
-            <ul>
-              <li>Full gym access</li>
-              <li>Locker support</li>
-              <li>One trainer consultation</li>
-            </ul>
-            <a href="#contact" class="btn btn-secondary">Pick This Plan</a>
-          </article>
-
-          <article class="price-card featured">
-            <span class="plan-tag">Most Popular</span>
-            <h3>Pro Transform</h3>
-            <p class="price">Rs 2,999<span>/month</span></p>
-            <ul>
-              <li>Everything in Basic</li>
-              <li>Weekly personal coaching</li>
-              <li>Nutrition guidance</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary">Start Strong</a>
-          </article>
-
-          <article class="price-card">
-            <span class="plan-tag">Elite</span>
-            <h3>Unlimited Coaching</h3>
-            <p class="price">Rs 4,999<span>/month</span></p>
-            <ul>
-              <li>Daily program support</li>
-              <li>Body tracking reviews</li>
-              <li>Priority class access</li>
-            </ul>
-            <a href="#contact" class="btn btn-secondary">Go Elite</a>
-          </article>
-        </div>
+      <div class="plan">
+        <h3>Standard</h3>
+        <p class="cost">Rs 2999</p>
+        <p>Gym access with trainer guidance.</p>
       </div>
-    </section>
 
-    <section class="testimonial-band">
-      <div class="container testimonial-wrap">
-        <p>"The vibe is serious, the equipment is excellent, and the space actually motivates you to show up."</p>
-        <span>Member feedback</span>
+      <div class="plan">
+        <h3>Premium</h3>
+        <p class="cost">Rs 4999</p>
+        <p>Personal support and full transformation help.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="contact section" id="contact">
-      <div class="container contact-panel">
-        <div class="contact-copy">
-          <p class="eyebrow">Let's get you started</p>
-          <h2>Ready to train in a stronger environment?</h2>
-          <p>
-            Visit Iron Pulse Gym, book a trial session, and begin your next phase with the right equipment and energy.
-          </p>
-        </div>
+  <section class="wrap contact" id="contact">
+    <p class="tag">Contact</p>
+    <h2>Start Your Fitness Journey</h2>
+    <p class="info">Visit Iron Pulse Gym and begin your next routine in a stronger environment.</p>
 
-        <div class="contact-card">
-          <div>
-            <span>Address</span>
-            <strong>101 Power Street, City Center</strong>
-          </div>
-          <div>
-            <span>Call</span>
-            <strong>+91 98765 43210</strong>
-          </div>
-          <div>
-            <span>Hours</span>
-            <strong>Mon - Sun / Open 24 Hours</strong>
-          </div>
-          <a href="mailto:join@ironpulsegym.com" class="btn btn-primary">Book A Free Trial</a>
-        </div>
+    <div class="contact-box">
+      <div>
+        <strong>Phone</strong>
+        <span>+91 98765 43210</span>
       </div>
-    </section>
-  </main>
+      <div>
+        <strong>Location</strong>
+        <span>101 Power Street, City Center</span>
+      </div>
+      <div>
+        <strong>Hours</strong>
+        <span>Open Daily - 24 Hours</span>
+      </div>
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>
