@@ -28,9 +28,7 @@ a {
   text-decoration: none;
 }
 
-button {
-  font: inherit;
-}
+
 
 h1,
 h2,
@@ -127,14 +125,7 @@ nav a:hover {
 }
 
 .hero img {
-  object-fit: cover;
-  filter: brightness(0.33);
-}
-
-.overlay {
-  background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.72));
+  opacity: 0.3;
 }
 
 .hero-text {
@@ -179,6 +170,9 @@ nav a:hover {
   padding: 14px 24px;
   border-radius: 999px;
   font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .gold {
@@ -198,6 +192,8 @@ section:not(.hero) {
 .about,
 .cards,
 .prices,
+.quote-card,
+.contact-layout,
 .contact-box,
 .pics {
   display: grid;
@@ -212,6 +208,8 @@ section:not(.hero) {
 .text,
 .card,
 .plan,
+.quote-card,
+.contact-main,
 .contact-box {
   background: var(--card);
   border: 1px solid var(--line);
@@ -220,6 +218,8 @@ section:not(.hero) {
 
 .text,
 .plan,
+.quote-card,
+.contact-main,
 .contact-box,
 .card {
   padding: 22px;
@@ -271,63 +271,155 @@ section:not(.hero) {
 
 .prices {
   grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
 }
 
 .cost {
   color: var(--text) !important;
-  font-size: 2rem;
-  margin: 0 0 10px;
+  font-size: 3.2rem;
+  line-height: 1;
+  margin: 0 0 16px;
+}
+
+.cost span {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.plan {
+  padding: 28px;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #121212;
+  border-radius: 24px;
+}
+
+.plan-tag {
+  margin: 0;
+  color: var(--gold) !important;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.plan h3 {
+  font-size: 2.2rem;
+  line-height: 1;
+  margin: 0;
+}
+
+.plan ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.plan li {
+  color: var(--muted);
+  line-height: 1.6;
+  padding-left: 18px;
+  position: relative;
+}
+
+.plan li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+
+.plan .btn {
+  margin-top: auto;
+  width: fit-content;
+  padding: 14px 24px;
+  border-radius: 999px;
+}
+
+.featured {
+  background: #3a2d17;
+  border-color: rgba(214, 163, 64, 0.6);
+}
+
+.quote-section {
+  padding-top: 30px !important;
+}
+
+.quote-card {
+  text-align: center;
+  padding: 70px 40px;
+  background: transparent;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+}
+
+.quote-text {
+  max-width: 900px;
+  margin: 0 auto 22px;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(2.3rem, 6vw, 5rem);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+}
+
+.quote-label {
+  margin: 0;
+  color: var(--gold);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.contact-layout {
+  grid-template-columns: 1.2fr 0.95fr;
+  align-items: stretch;
+}
+
+.contact-main,
+.contact-box {
+  padding: 34px;
+}
+
+.contact-main h2 {
+  max-width: 11ch;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.contact-main .info {
+  margin: 0;
+  max-width: 520px;
 }
 
 .contact-box {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-content: start;
 }
 
 .contact-box strong {
   display: block;
   margin-bottom: 8px;
+  color: var(--gold);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .contact-box span {
   color: var(--muted);
 }
 
-@media (max-width: 900px) {
-  nav {
-    position: absolute;
-    top: 80px;
-    left: 16px;
-    right: 16px;
-    display: none;
-    flex-direction: column;
-    gap: 14px;
-    padding: 18px;
-    background: #101010;
-    border: 1px solid var(--line);
-    border-radius: 16px;
-  }
-
-  nav.show {
-    display: flex;
-  }
-
-  .menu-btn {
-    display: inline-block;
-  }
-
-  .about,
-  .cards,
-  .prices,
-  .pics,
-  .contact-box {
-    grid-template-columns: 1fr;
-  }
-
-  .pics img:first-child {
-    grid-row: auto;
-  }
-
-  .hero h1 {
-    max-width: 9ch;
-  }
+.contact-btn {
+  margin-top: 8px;
+  width: 100%;
 }
