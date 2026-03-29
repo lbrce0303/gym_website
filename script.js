@@ -1,8 +1,11 @@
-const menuBtn = document.getElementById("menuBtn");
-const menu = document.getElementById("menu");
+const buttons = document.querySelectorAll(".btn");
 
-if (menuBtn && menu) {
-  menuBtn.addEventListener("click", function () {
-    menu.classList.toggle("show");
-  });
-}
+buttons.forEach(function (button) {
+  if (!button.closest(".hero")) {
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+      const buttonText = button.textContent.trim();
+      alert(buttonText + " button clicked!");
+    });
+  }
+});
