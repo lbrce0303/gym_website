@@ -184,8 +184,9 @@ nav a:hover {
 }
 
 .line {
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #1c1c1c;
+  color: var(--text);
 }
 
 section:not(.hero) {
@@ -425,4 +426,46 @@ section:not(.hero) {
 .contact-btn {
   margin-top: 8px;
   width: 100%;
+}
+
+.booking-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+  place-items: center;
+}
+
+.booking-modal.show {
+  display: grid;
+}
+
+.booking-form {
+  width: min(420px, 100%);
+  padding: 28px;
+  display: grid;
+  gap: 14px;
+  background: #111111;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+}
+
+.booking-form h3 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.booking-form input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #151515;
+  color: var(--text);
+  font: inherit;
+}
+
+.booking-actions {
+  display: flex;
+  gap: 12px;
 }
