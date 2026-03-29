@@ -116,7 +116,7 @@
           <li>Locker support</li>
           <li>One trainer consultation</li>
         </ul>
-        <button class="btn line" type="button">Pick This Plan</button>
+        <button class="btn line" type="button" data-booking="Basic Access">Pick This Plan</button>
       </div>
 
       <div class="plan featured">
@@ -128,7 +128,7 @@
           <li>Weekly personal coaching</li>
           <li>Nutrition guidance</li>
         </ul>
-        <button class="btn gold" type="button">Start Strong</button>
+        <button class="btn gold" type="button" data-booking="Pro Transform">Start Strong</button>
       </div>
 
       <div class="plan">
@@ -140,7 +140,7 @@
           <li>Body tracking reviews</li>
           <li>Priority class access</li>
         </ul>
-        <button class="btn line" type="button">Go Elite</button>
+        <button class="btn line" type="button" data-booking="Unlimited Coaching">Go Elite</button>
       </div>
     </div>
   </section>
@@ -158,6 +158,7 @@
         <p class="tag">Let's Get You Started</p>
         <h2>Ready to train in a stronger environment?</h2>
         <p class="info">Visit Iron Pulse Gym, book your first session, and begin your next phase with the right equipment and energy.</p>
+
       </div>
 
       <div class="contact-box">
@@ -173,10 +174,24 @@
           <strong>Hours</strong>
           <span>Mon - Sun / Open 24 Hours</span>
         </div>
-        <button class="btn gold contact-btn" type="button">Book A Free Visit</button>
+        <button class="btn gold contact-btn" type="button" data-booking="Free Visit">Book A Free Visit</button>
       </div>
     </div>
   </section>
+
+  <div id="bookingModal" class="booking-modal">
+    <form id="bookingForm" class="booking-form">
+      <p class="tag">Book Now</p>
+      <h3 id="bookingTitle">Plan Booking</h3>
+      <input type="text" id="name" placeholder="Your name" required>
+      <input type="tel" id="phone" placeholder="Phone number" required>
+      <input type="date" id="date" required>
+      <div class="booking-actions">
+        <button class="btn gold" type="submit">Confirm Booking</button>
+        <button class="btn line" type="button" id="closeBooking">Close</button>
+      </div>
+    </form>
+  </div>
 
   <script src="script.js"></script>
 </body>
