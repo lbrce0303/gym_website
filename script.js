@@ -1,11 +1,23 @@
-const buttons = document.querySelectorAll(".btn");
+const bookingButtons = document.querySelectorAll("[data-booking]");
+const bookingModal = document.getElementById("bookingModal");
+const bookingForm = document.getElementById("bookingForm");
+const bookingTitle = document.getElementById("bookingTitle");
+const closeBooking = document.getElementById("closeBooking");
 
-buttons.forEach(function (button) {
-  if (!button.closest(".hero")) {
-    button.addEventListener("click", function (event) {
-      event.preventDefault();
-      const buttonText = button.textContent.trim();
-      alert(buttonText + " button clicked!");
-    });
-  }
+bookingButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    bookingTitle.textContent = button.dataset.booking + " Booking";
+    bookingModal.classList.add("show");
+  });
+});
+
+bookingForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  alert("Your booking request has been sent!");
+  bookingForm.reset();
+  bookingModal.classList.remove("show");
+});
+
+closeBooking.addEventListener("click", function () {
+  bookingModal.classList.remove("show");
 });
